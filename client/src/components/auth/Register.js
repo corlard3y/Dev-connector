@@ -81,7 +81,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
           />
         </div>
         <input type="submit" 
-        className="navButtons" 
+        className="pre-Buttons" 
         value="Register" />
       </form>
       <p className="my-1">

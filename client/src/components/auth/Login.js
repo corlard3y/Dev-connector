@@ -51,7 +51,7 @@ const Login = ({ login, isAuthenticated }) => {
           />
         </div>
         <input type="submit" 
-        className="navButtons" 
+        className="pre-Buttons" 
         value="Login" />
       </form>
       <p className="my-1">

@@ -1,22 +1,23 @@
 /* Global Styles */
 :root {
-  /* --primary-color: #17a2b8;
+  --primary-color: #17a2b8;
   --dark-color: #343a40;
   --light-color: #f4f4f4;
   --danger-color: #dc3545;
-  --success-color: #28a745; */
+  --success-color: #28a745;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  /* background-color: white; */
 }
 
 body {
-  font-family: 'Raleway', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
+  padding-top: 4rem;
   background-color: #fff;
   color: #333;
 }
@@ -24,6 +25,15 @@ body {
 a {
   color: #464e55;
   text-decoration: none;
+}
+.nav-links {
+  color: white;
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.nav-links:hover {
+  /* color: red; */
 }
 
 ul {
@@ -40,26 +50,39 @@ img {
   margin: auto;
   overflow: hidden;
   padding: 0 2rem;
-  margin-top: 6rem;
-  margin-bottom: 3rem;
+  padding-top: 0.5rem;
+  /* margin-bottom: 3rem; */
 }
 
 /* Text Styles*/
 .x-large {
-  font-size: 4rem;
+  font-size: 2.5rem;
   line-height: 1.2;
+  margin-top: 64vh;
+  color: #343a40;
   margin-bottom: 1rem;
+}
+.dev {
+  font-size: 2rem;
 }
 
 .large {
   font-size: 3rem;
   line-height: 1.2;
+  /* margin-top: auto; */
+  margin-bottom: 1rem;
+}
+.reg-size {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-top: 6rem;
   margin-bottom: 1rem;
 }
 
 .lead {
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  color: #343a40;
 }
 
 .text-center {
@@ -67,7 +90,7 @@ img {
 }
 
 .text-primary {
-  color: var(--primary-color);
+  color: #343a40;
 }
 
 .text-dark {
@@ -150,7 +173,7 @@ img {
 
 .alert {
   padding: 0.8rem;
-  margin: 1rem 0;
+  margin-bottom: 1rem;
   opacity: 0.9;
   background: var(--light-color);
   color: #333;
@@ -224,16 +247,6 @@ img {
   margin: 1.5rem 0;
 }
 
-/* Overlay */
-.dark-overlay {
-  background-color: rgba(0, 0, 0, 0.7);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
 /* Forms */
 .form .form-group {
   margin: 1.2rem 0;
@@ -301,28 +314,37 @@ button {
   background: var(--light-color);
 }
 
-/* Navbar */
-.navbar {
+.nav-top {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.7rem 2rem;
-  position: fixed;
-  z-index: 1;
-  width: 100%;
-  top: 0;
-  background-color: white;
-  border-bottom: solid 1px #464e55;
-  opacity: 0.9;
+  flex-direction: row;
+  float: right;
 }
 
 .navButtons {
   border: 1px solid #464e55;
   border-radius: 5px;
   text-align: center;
+  width: auto;
+  height: 35px;
+  background-color: white;
+  margin: 5px;
+  padding: 5px 10px 0px 10px;
+}
+
+.pre-Buttons {
+  border: 1px solid #464e55;
+  border-radius: 5px;
+  text-align: center;
   width: 80px;
   height: 40px;
+  background-color: white;
+  margin: 5px;
 }
+.pre-Buttons:hover {
+  background-color: #464e55;
+  color: white;
+}
+
 .navButtons:hover {
   background-color: #464e55;
   color: white;
@@ -352,9 +374,10 @@ button {
 
 /* Landing Page */
 .landing {
-  position: relative;
-  background: url('./img/showcase.jpg') no-repeat center center/cover;
-  height: 100vh;
+  /* position: relative; */
+  background: url('./img/Desktop-Accessories.jpg') no-repeat center center/cover;
+  /* margin: 0; */
+  height: 90vh;
 }
 
 .landing-inner {
@@ -367,6 +390,29 @@ button {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+.specialButtons {
+  border: 1px solid #464e55;
+  text-decoration: none;
+  width: 105px;
+  height: 35px;
+  padding-top: 5px;
+  border-radius: 55px;
+  align-items: center;
+  text-align: center;
+  margin: 7px;
+}
+.fa-arrow-right {
+  display: none;
+}
+.specialButtons:hover {
+  background-color: #464e55;
+  color: white;
+}
+.special {
+  display: flex;
+  flex-direction: row;
 }
 
 /* Profiles Page */
@@ -507,24 +553,25 @@ button {
   font-size: 0.8rem;
   margin-bottom: 0.5rem;
 }
-
 /* Mobile Styles */
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .container {
-    margin-top: 8rem;
+    /* margin-top: 8rem; */
   }
-
   .hide-sm {
     display: none;
   }
-
+  .reg-size {
+    font-size: 2rem;
+  }
   /* Text Styles */
   .x-large {
-    font-size: 3rem;
+    font-size: 1.5rem;
+    margin-top: 32rem;
   }
 
   .large {
-    font-size: 2rem;
+    font-size: 1rem;
   }
 
   .lead {
@@ -533,8 +580,11 @@ button {
 
   /* Navbar */
   .navbar {
-    display: block;
-    text-align: center;
+    height: 3rem;
+    margin-top: 10px;
+    border-bottom: solid 1px white;
+    /* display: block; */
+    /* text-align: center; */
   }
 
   .navbar ul {
