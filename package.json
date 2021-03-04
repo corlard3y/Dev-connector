@@ -12,6 +12,7 @@
   "author": "Kolade",
   "license": "ISC",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.2",
     "bcrypt": "^5.0.0",
     "config": "^3.3.3",
     "express": "^4.17.1",

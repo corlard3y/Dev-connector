@@ -120,6 +120,9 @@ export const getPost = id => async dispatch => {
     }
 };
 
+
+
+
 //ADD comment
 export const addComment = (postId, formData) => async dispatch => {
     const config ={

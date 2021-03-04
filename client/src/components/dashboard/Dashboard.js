@@ -30,7 +30,7 @@ const Dashboard = ({ getCurrentProfile ,
                <Education education={profile.education}/>
 
                 <div className='my-2'>
-                    <div className="btn btn-danger" 
+                    <div className="btn dash-danger" 
                     onClick={()=> deleteAccount()}>
                    <i className="fa fa-user">{'   '}
                    Delete My Account</i>
@@ -40,7 +40,7 @@ const Dashboard = ({ getCurrentProfile ,
            </Fragment>:
            <Fragment>
                <p>You have not yet setup a profile, please add some info</p>
-               <Link to='/create-profile' className='btn btn-primary my-1'>Create Profile</Link>
+               <Link to='/create-profile' className='btn bg-post my-1'>Create Profile</Link>
                </Fragment>}
        </Fragment>
     )

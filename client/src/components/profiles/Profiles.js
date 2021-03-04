@@ -19,7 +19,7 @@ const Profiles = ({
            {loading ? <Spinner /> : <Fragment>
                <h1 className="large text-primary">Developers</h1>
                <p className="lead">
-                   <i className="fa fa-connectdevelop"></i>{'  '}Browse and connect with Developers
+                   <i className="fa fa-connectdevelop"></i>{'  '}Browse and connect with Other Developers and Professionals around the world. 
                </p>
                <div className="profiles">
                        {profiles.length > 0 ? (

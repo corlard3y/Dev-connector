@@ -162,10 +162,11 @@ const CreateProfile = ({ createProfile, history }) => {
             
         </Fragment>)}
 
-        
-        <input type="submit" className="btn btn-primary my-1" />
-        <Link className="btn btn-light my-1" to="/dashboard">Go Back</Link>
-      </form>
+        <div style={{display:'flex',flexDirection:'row'}}>
+            <input type="submit" className="btn btn-post" target='_top'/>
+            <Link className="btn btn-post" to="/dashboard" target='_top'>Go Back</Link>     
+        </div>
+</form>
         </Fragment>
     );
 };

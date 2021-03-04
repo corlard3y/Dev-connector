@@ -71,6 +71,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+import BottomNav from './BottomNav';
 
 const drawerWidth = 240;
 
@@ -94,6 +95,7 @@ const useStyles = makeStyles((theme) => ({
   },
   menuButton: {
     marginRight: theme.spacing(2),
+    // color:'#464e55'
   },
   hide: {
     display: 'none',
@@ -151,7 +153,7 @@ export const Navbar =({ auth: { isAuthenticated, loading}, logout}) => {
   const authSide = (
     <List style={{backgroundColor:'#464e55', color:'white'}}>
           <Link to='/dashboard' onClick={handleDrawerClose} className='nav-links'><ListItem button>
-            <ListItemText><i className='fa fa-dashboard'></i>{'     '}Dashboard</ListItemText>
+            <ListItemText><i className='fa fa-home'></i>{'     '}Dashboard</ListItemText>
           </ListItem></Link>
           <Link to='/posts' onClick={handleDrawerClose} className='nav-links'><ListItem button>
             <ListItemText><i className='fa fa-comment'></i>{'     '}Posts</ListItemText>
@@ -190,18 +192,19 @@ export const Navbar =({ auth: { isAuthenticated, loading}, logout}) => {
 
   const authLinks = (
     <ul className='nav-top'>
+      <Link to='/dashboard'><li className='navButtons'>
+       <i className='fa fa-home hide-xs'></i>{' '}
+        <span className='hide-sm  hide-md'>Dashboard</span></li></Link>
       <Link to='/profiles'><li className='navButtons'>
-      <i className='fa fa-users'></i>{' '}
-        <span className='hide-sm'>Developers</span></li></Link>
-        {/* <Link to='/posts'><li className='navButtons'>
-      <i className='fa fa-comment'></i>{' '}
-        <span className='hide-sm'>Posts</span></li></Link> */}
-       <Link to='/dashboard'><li className='navButtons'>
-       <i className='fa fa-dashboard'></i>{' '}
-        <span className='hide-sm'>Dashboard</span></li></Link>
+      <i className='fa fa-users hide-xs'></i>{' '}
+        <span className='hide-sm hide-md'>Developers</span></li></Link>
+        <Link to='/posts'><li className='navButtons'>
+      <i className='fa fa-comment hide-xs' ></i>{' '}
+        <span className='hide-sm  hide-md'>Posts</span></li></Link>
+       
     <Link onClick={logout} to='#!'><li className='navButtons'>
-      <i className='fa fa-sign-out'></i>{' '}
-     <span className="hide-sm"> Logout</span></li></Link>
+      <i className='fa fa-sign-out hide-xs'></i>{' '}
+     <span className="hide-sm  hide-md"> Logout</span></li></Link>
   </ul>
   );
   
@@ -209,8 +212,8 @@ export const Navbar =({ auth: { isAuthenticated, loading}, logout}) => {
     <ul className='nav-top'>
         {/* <Link to='/profiles'><li className='navButtons hide-sm'>
         Developers</li></Link> */}
-        <Link to='/register'><li className='navButtons hide-sm'>Register</li></Link>
-        <Link to='/login'><li className='navButtons hide-sm'>Login</li></Link>
+        <Link to='/register'><li className='navButtons hide-sm'>Join</li></Link>
+        <Link to='/login' className="hide-md"><li className='navButtons hide-sm'>Login</li></Link>
       </ul>
   );
 
@@ -224,15 +227,16 @@ export const Navbar =({ auth: { isAuthenticated, loading}, logout}) => {
       style={{
         backgroundColor:'white',
         color:'#464e55',
-        // height:'65px'
-        // boxShadow:'0px 0px 0px 0px'
+        // height:'85px'
+        boxShadow:'0px 0px 0px 0px',
+        borderBottom:'1px solid #eceff1'
       }}
         position="fixed"
         className={clsx(classes.appBar, {
           [classes.appBarShift]: open,
         })}
       >
-        <Toolbar style={{display:'flex',flexDirection:'row',justifyContent:'flex-end',alignItems:'center'}}>
+        <Toolbar style={{display:'flex',flexDirection:'row',justifyContent:'flex-start',alignItems:'center',padding:'0px 0px 0px 0px'}}>
           <IconButton
           // style={{marginRight:'auto'}}
             aria-label="open drawer"
@@ -241,7 +245,7 @@ export const Navbar =({ auth: { isAuthenticated, loading}, logout}) => {
             edge="start"
             className={clsx(classes.menuButton, open && classes.hide)}
           >
-            <MenuIcon />         
+            <MenuIcon/>         
           </IconButton>
           <Typography style={{marginRight:'auto'}}>
              <h2 className='dev'><Link to='/' onClick={handleDrawerClose}>DevConnector</Link></h2>
@@ -252,7 +256,9 @@ export const Navbar =({ auth: { isAuthenticated, loading}, logout}) => {
       </AppBar>
       <Drawer
         className={classes.drawer}
-        variant="persistent"
+        onEscapeKeyDown={handleDrawerClose}
+        onBackdropClick={handleDrawerClose}
+        variant="temporary"
         anchor="left"
         open={open}
         classes={{
@@ -266,28 +272,9 @@ export const Navbar =({ auth: { isAuthenticated, loading}, logout}) => {
         </div>
         {!loading && (<Fragment>{isAuthenticated ? authSide : guestSide}</Fragment>)}
 
-        {/* <List style={{backgroundColor:'black', color:'white'}}>
-        <Link to='/' onClick={handleDrawerClose} className='nav-links'><ListItem>
-          <small>
-            DEVCONNECT is a platform for developers to meet and share ideas
-          </small>
-          </ListItem></Link>
-          
-        <Divider style={{backgroundColor:'#464e55'}}/>
-              <Link to='/profiles' onClick={handleDrawerClose} className='nav-links'><ListItem button>
-                <ListItemText>Developers</ListItemText>
-              </ListItem></Link>
-              <Link to='/register' onClick={handleDrawerClose} className='nav-links'><ListItem button>
-                <ListItemText>Register</ListItemText>
-              </ListItem></Link>
-              <Link to='/login' onClick={handleDrawerClose} className='nav-links'><ListItem button>
-                <ListItemText>Login</ListItemText>
-              </ListItem></Link>
-          
-        </List> */}
-        {/* <Divider style={{color:'white',backgroundColor:'white'}}/> */}
       </Drawer>
-     
+      {/* {!loading && isAuthenticated &&(<BottomNav />)} */}
+      {/* <BottomNav /> */}
     </div>
   );
 };
@@ -295,7 +282,7 @@ export const Navbar =({ auth: { isAuthenticated, loading}, logout}) => {
 
 Navbar.propTypes = {
   logout: PropTypes.func.isRequired,
-  auth: PropTypes.func.isRequired
+  auth: PropTypes.object.isRequired,
 };
 
 const mapStateToProps = state => ({

@@ -12,7 +12,7 @@ const PrivateRoute = ({ component: Component, auth: { isAuthenticated, loading},
  )
 
 PrivateRoute.propTypes = {
-    auth:PropTypes.func.isRequired
+    auth:PropTypes.object.isRequired,
 }
 
 const mapStateToProps = state => ({

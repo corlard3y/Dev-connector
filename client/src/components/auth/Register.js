@@ -29,7 +29,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
         }
      };
 
-     //redirect if logged in
+     //redirect if successful
      if(isAuthenticated){
       return <Redirect to='/dashboard'/>;
     }
@@ -41,7 +41,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
       <form className="form" onSubmit={e => onSubmit(e)}>
         <div className="form-group">
           <input type="text" 
-          placeholder="Name" 
+          placeholder="Full Name" 
           name="name" 
           value={name} 
           onChange={ e => onChange(e)}

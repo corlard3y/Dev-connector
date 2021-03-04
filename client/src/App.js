@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect } from 'react';
 import './App.css';
 import Navbar from './components/layout/Navbar';
+import BottomNav from './components/layout/BottomNav';
 import Landing from './components/layout/Landing';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Login from './components/auth/Login';
@@ -27,6 +28,7 @@ if(localStorage.token){
   setAuthToken(localStorage.token);
 }
 
+
 const App = () =>  {
   useEffect(() => {
     store.dispatch(loadUser());
@@ -37,7 +39,9 @@ const App = () =>  {
   <Router>
       <Fragment>
         <Navbar />
+        <div className='upper'>
         <Route exact path='/' component={Landing} />
+        </div>
       <section className="container">
       <Alert />
           <Switch>
@@ -45,6 +49,7 @@ const App = () =>  {
             <Route path='/login' component={Login} />
             <Route path='/profiles' component={Profiles} />
             <Route path='/profile/:id' component={Profile} />
+            {/* <Route path='/dashboard' component={Dashboard} /> */}
             <PrivateRoute path='/dashboard' component={Dashboard} />
             <PrivateRoute path='/create-profile' component={CreateProfile} />
             <PrivateRoute path='/edit-profile' component={EditProfile} />
@@ -53,7 +58,7 @@ const App = () =>  {
             <PrivateRoute path='/post/:id' component={Post} />      
             <PrivateRoute path='/add-education' component={AddEducation} />
           </Switch>
-      </section>   
+      </section>
       </Fragment>
     </Router>
   </Provider> 

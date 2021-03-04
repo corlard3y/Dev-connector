@@ -1,4 +1,4 @@
-import React,{ Fragment, useEffect} from 'react'
+import React,{ Fragment, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -10,6 +10,7 @@ import ProfileExperience from './ProfileExperience';
 import ProfileEducation from './ProfileEducation'; 
 import ProfileGithub from './ProfileGithub'; 
 
+
 const Profile = ({ match,auth, getProfileById,profile:{profile, loading} }) => {
 
     useEffect(()=> {
@@ -19,9 +20,24 @@ const Profile = ({ match,auth, getProfileById,profile:{profile, loading} }) => {
         <Fragment>
             {profile === null || loading ? <Spinner /> :
              <Fragment>
-                 <Link to='/profiles' className='btn btn-light'>Back to Profiles</Link>
-                 {auth.isAuthenticated && auth.loading === false && auth.user._id === profile.user._id && (<Link to='/edit-profile' className='btn btn-dark'>Edit Profile</Link>)}
+                 <div style={{display:'flex',flexDirection:'row',justifyContent:'space-between'}}>
+                 <Link to='/profiles' className='btn profile-buttons'>
+                     <i className='fa fa-chevron-left'></i>
+                     <span className='hide-sm hide-xs'>
+                     Back to Profiles
+                     </span>
+                     </Link>
+
+
+                    {auth.isAuthenticated && auth.loading === false && auth.user._id === profile.user._id && (<Link to='/edit-profile' className='btn bg-post'>
+                        <i className='fa fa-edit'></i>
+                        <span className='hide-sm hide-xs'>
+                        Edit Profile    
+                         </span></Link>)}
+
+                 </div>
                  <div className='profile-grid my-1'>
+
                     <ProfileTop profile={profile} />
                     <ProfileAbout profile={profile} />
 
