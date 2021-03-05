@@ -47,7 +47,7 @@ const ProfilesItem = ({ profile: {
         {/* <div>{status} {company && <span> at {company},</span>}{location && <span>{location}</span>}
 
         </div> */}
-        <div>
+        <div className='one'>
           <Link to={`/profile/${_id}`} className='btn-body hide-sm hide-xs'>View Profile</Link>
 
         </div>

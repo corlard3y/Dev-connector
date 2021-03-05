@@ -19,7 +19,8 @@ const Profile = ({ match,auth, getProfileById,profile:{profile, loading} }) => {
     return (
         <Fragment>
             {profile === null || loading ? <Spinner /> :
-             <Fragment>
+            <div className='saka'>
+                         <Fragment>
                  <div style={{display:'flex',flexDirection:'row',justifyContent:'space-between'}}>
                  <Link to='/profiles' className='btn profile-buttons'>
                      <i className='fa fa-chevron-left'></i>
@@ -65,6 +66,8 @@ const Profile = ({ match,auth, getProfileById,profile:{profile, loading} }) => {
 
                  </div>
              </Fragment>
+            </div>
+            
             }
         </Fragment>
     )

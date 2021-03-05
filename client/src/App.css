@@ -7,30 +7,75 @@
   --success-color: #28a745;
 }
 
+.nav-top a li .fa {
+  position: relative;
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: middle;
+}
+.nav-links .fa {
+  position: relative;
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: middle;
+}
+/* * { */
+/* box-sizing: border-box; */
+/* margin: 0; */
+/* padding: 0; */
+/* overflow-x: hidden; */
+/* background-color: red; */
+/* } */
+.saka {
+  padding: 1.5rem 4rem;
+}
+.sake {
+  padding: 1.5rem 4rem 0rem 4rem;
+}
+.alert {
+  padding: 0.8rem;
+  opacity: 0.9;
+  background: var(--light-color);
+  color: #333;
+}
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   /* background-color: white; */
 }
-
 body {
   font-size: 1rem;
   line-height: 1.6;
-  padding-top: 60px;
+  padding-top: 6vh;
   background-color: white;
   color: #333;
+  /* padding-left: 4rem;
+  padding-right: 4rem; */
 }
 a {
   color: #464e55;
   text-decoration: none;
 }
 .nav-links {
+  background-color: green;
   color: white;
   font-size: 16px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, */
+  /* Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+}
+.nav-links span,
+.nav-links i {
+  background-color: #464e55;
 }
 .nav-links:hover {
   /* color: red; */
@@ -46,16 +91,11 @@ img {
 
 /* Utilities */
 .container {
-  /* position: fixed; */
-  /* top: 0; */
-  /* bottom: 0; */
-  /* left: 0; */
-  /* right: 0; */
   max-width: auto;
-  max-height: 100%;
+  min-height: 93vh;
   margin: auto;
   overflow: hidden;
-  padding: 0 3rem;
+  /* padding: 0 3rem; */
   background-color: white;
   /* padding-top: 0.5rem; */
   /* margin-bottom: 56px; */
@@ -74,7 +114,7 @@ img {
 }
 
 .large {
-  font-size: 3rem;
+  font-size: 2.5rem;
   line-height: 1.2;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -178,13 +218,6 @@ img {
   color: #333;
 }
 
-.alert {
-  padding: 0.8rem;
-  margin-bottom: 1rem;
-  opacity: 0.9;
-  background: var(--light-color);
-  color: #333;
-}
 .bg-post {
   color: #fff;
   background-color: #464e55;
@@ -405,6 +438,10 @@ button {
   display: flex;
   flex-direction: row;
 }
+.card span,
+.card span i {
+  background-color: transparent;
+}
 
 /* Landing Page */
 .landing {
@@ -420,14 +457,17 @@ button {
   margin-top: 20%;
   color: white;
   margin-bottom: 1rem;
+  background-color: transparent;
 }
 .land-text {
   font-size: 1.2rem;
   margin-bottom: 1rem;
   color: white;
+  background-color: transparent;
 }
 
 .landing-inner {
+  background-color: transparent;
   color: #fff;
   width: 80%;
   margin: auto;
@@ -477,6 +517,7 @@ button {
 .last {
   display: flex;
   color: #90a4ae;
+  background-color: transparent;
   flex-direction: row;
   justify-content: space-between;
   padding-top: 30px;
@@ -484,31 +525,43 @@ button {
   padding-bottom: 30px;
   /* padding-left: 65px; */
 }
+.last div,
+.last span,
+.last div a {
+  background-color: transparent;
+}
 
 .footer-body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   color: #90a4ae;
+  background-color: transparent;
 }
 .footer-body > a {
   color: #90a4ae;
   margin-top: 1rem;
+  background-color: transparent;
 }
 .footer-body > b {
   color: #b0bec5;
+  background-color: transparent;
 }
 .specialButtons {
   border: 1px solid white;
   color: white;
-  text-decoration: none;
+  /* text-decoration: none; */
   width: 105px;
   height: 35px;
-  padding-top: 5px;
+  /* padding-top: 5px; */
   border-radius: 55px;
-  align-items: center;
-  text-align: center;
+  /* align-items: center; */
+  /* text-align: center; */
   margin: 7px;
+  background-color: transparent;
+}
+.special a {
+  background-color: transparent;
 }
 .fa-arrow-right {
   display: none;
@@ -519,6 +572,8 @@ button {
   color: white;
 }
 .special {
+  background-color: transparent;
+  width: auto;
   display: flex;
   flex-direction: row;
 }
@@ -536,6 +591,37 @@ button {
   border-radius: 5px;
   height: 10rem;
   width: 14rem;
+}
+.dash-buttons-dash span,
+.nav-top a span,
+.nav-top a i,
+.dash-buttons-dash i,
+.profile-about,
+.post div,
+.post div p,
+.post div a,
+.post div a h4,
+.post div button i,
+.btn-post-body a,
+.btn-post-body span,
+.bg-post h3,
+.post-profile,
+.post-profile a,
+.post-profile a h4,
+.large,
+.lead,
+.lead span,
+.profile-top p,
+.profile-top p span,
+.icons,
+.icons a i,
+.icons a,
+.dash-danger i,
+.pro-profile,
+.pro-profile h2,
+.pro-profile,
+.profile .one {
+  background-color: transparent;
 }
 .post-profile {
   display: flex;
@@ -718,8 +804,10 @@ button {
 .last > div > span > b {
   margin-right: 3rem;
   font-size: 20px;
+  background-color: transparent;
 }
 .last > div > a > i {
+  background-color: transparent;
   color: white;
   margin-right: 2rem;
 }
@@ -766,6 +854,7 @@ button {
     flex-direction: column;
     align-items: center;
   } */
+
   .navButtons {
     border: 0px;
     padding: 0px 0px 0px 0px;
@@ -800,6 +889,12 @@ button {
 
 /* Mobile Styles */
 @media (max-width: 600px) {
+  .sake {
+    padding: 1.5rem 2rem 0rem 2rem;
+  }
+  .saka {
+    padding: 1.5rem 2rem;
+  }
   .fa-edit {
     padding-right: 0px;
   }
@@ -909,6 +1004,7 @@ button {
   }
   .dev {
     font-size: 1.5rem;
+    /* background-color: red; */
   }
 
   .navbar h1 {
@@ -983,6 +1079,12 @@ button {
 }
 
 @media (max-width: 376px) {
+  .saka {
+    padding: 1.5rem 2rem;
+  }
+  .sake {
+    padding: 1.5rem 2rem 0rem 2rem;
+  }
   .fa-edit {
     padding-right: 0px;
   }

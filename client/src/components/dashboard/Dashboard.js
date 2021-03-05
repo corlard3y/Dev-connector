@@ -19,7 +19,9 @@ const Dashboard = ({ getCurrentProfile ,
     }, [getCurrentProfile]);
 
     return (
-       loading && profile === null ? <Spinner /> : <Fragment>
+       loading && profile === null ? <Spinner /> : 
+       <div className='saka'>
+            <Fragment>
            <h1 className='large text-primary'>Dashboard</h1>
            <p className='lead'>
                <i className='fa fa-user'>{' '}Welcome, { user && user.name }  </i>
@@ -43,6 +45,8 @@ const Dashboard = ({ getCurrentProfile ,
                <Link to='/create-profile' className='btn bg-post my-1'>Create Profile</Link>
                </Fragment>}
        </Fragment>
+       </div>
+      
     )
 }
 

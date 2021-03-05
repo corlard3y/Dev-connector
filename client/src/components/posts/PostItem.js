@@ -78,7 +78,7 @@ showActions
               {text}
             </p>
              <p className="post-date">
-                Posted on <Moment format='YYYY/MM/DD'>{date}</Moment>
+                Posted on <Moment format='YYYY/MM/DD' style={{backgroundColor:'transparent'}}>{date}</Moment>
             </p>
             <hr style={{
       display: 'block',
@@ -99,9 +99,9 @@ showActions
                       setHeart(fasFaHeart);
                       setThumbs(farFaThumbsDown);
                     }}
-                    icon={fasFaHeart} size='2x' style={{color:'white'}}/>{'   '}
+                    icon={fasFaHeart} size='2x' style={{color:'white',backgroundColor:'transparent'}}/>{'   '}
 
-                <span style={{color:'white'}}>{likes.length > 0 && (
+                <span style={{color:'white',backgroundColor:'transparent'}}>{likes.length > 0 && (
                <span>{likes.length}</span>)}</span>
                </button>
              ) : (
@@ -111,27 +111,13 @@ showActions
                 setHeart(fasFaHeart);
                 setThumbs(farFaThumbsDown);
               }}
-              icon={farFaHeart} size='2x' style={{color:'white'}}/>
+              icon={farFaHeart} size='2x' style={{color:'white',backgroundColor:'transparent'}}/>
 
             <span style={{color:'white'}}>{likes.length > 0 && (
                <span>{likes.length}</span>)}</span>{'   '}
          </button>
              )
              }
-                {/* <button onClick={e => addLike(_id)} type="button" className="btn-post-body">
-              {auth.user && (
-                alert(),
-                    <FontAwesomeIcon
-                    onClick={() => {
-                      setHeart(fasFaHeart);
-                      setThumbs(farFaThumbsDown);
-                    }}
-                    icon={heart} size='2x' style={{color:'white'}}/>
-              )}{'   '}
-              
-              <span style={{color:'white'}}>{likes.length > 0 && (
-               <span>{likes.length}</span>)}</span>
-            </button> */}
             <button onClick={e => removeLike(_id)} type="button" className="btn-post-body">
               {/* <i className="fa fa-thumbs-down fa-2x"></i> */}
               <FontAwesomeIcon
@@ -139,14 +125,14 @@ showActions
                 setThumbs(fasFaThumbsDown);
                 setHeart(farFaHeart);
               }}
-              icon={thumbs} size='2x' style={{color:'white'}}/>{'   '}
+              icon={thumbs} size='2x' style={{color:'white',backgroundColor:'transparent'}}/>{'   '}
             </button>
             <button className="btn-post-body">
             <Link to={`/post/${_id}`} >
               {/* Comments{'  '} */}
-              <FontAwesomeIcon icon={faComment} size='2x' style={{color:'white'}}/>{'   '}
+              <FontAwesomeIcon icon={faComment} size='2x' style={{color:'white',backgroundColor:'transparent'}}/>{'   '}
               {comments.length > 0 && (
-               <span style={{color:'white'}}>{comments.length}</span>)}
+               <span style={{color:'white',backgroundColor:'transparent'}}>{comments.length}</span>)}
             </Link>
             </button>
           

@@ -27,7 +27,8 @@ const AddExperience = ({ addExperience, history}) => {
   
     return (
         <Fragment>
-                <h1 className="large text-primary">
+          <div className='saka'>
+          <h1 className="large text-primary">
        Add An Experience
       </h1>
       <p className="lead">
@@ -81,6 +82,8 @@ const AddExperience = ({ addExperience, history}) => {
             <Link className="btn btn-post" to="/dashboard" target='_top'>Go Back</Link>     
         </div>
         </form>
+          </div>
+               
         </Fragment>
     )
 }

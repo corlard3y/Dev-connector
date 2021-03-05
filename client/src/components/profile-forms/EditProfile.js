@@ -68,9 +68,10 @@ const EditProfile = ({ profile:{profile, loading},createProfile,getCurrentProfil
     }
     return (
         <Fragment>
-            <h1 className="large text-primary">
+          <div className='saka'>
+          <h2 className="large text-primary">
         Create Your Profile
-      </h1>
+      </h2>
       <p className="lead">
         <i className="fa fa-user"></i> Let's get some information to make your
         profile stand out
@@ -189,6 +190,8 @@ const EditProfile = ({ profile:{profile, loading},createProfile,getCurrentProfil
         </div>
         
         </form>
+          </div>
+           
         </Fragment>
     );
 };

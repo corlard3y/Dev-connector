@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     '& > *': {
-      margin: theme.spacing(1),
+      // margin: theme.spacing(1),
     },
   },
   small: {
@@ -41,10 +41,11 @@ const Landing = ({ isAuthenticated }) => {
             Create Developer profile/portfolio, share posts and get help from
             other developers all over the world
           </p>
-          <div>
-            <ul className='special'>
-            <Link to='/register' ><li className="specialButtons">Sign Up{'   '}<i className='fa fa-arrow-right hide-sm'></i></li></Link>
-            <Link to='/login'><li className="specialButtons">Login{'   '}<i className='fa fa-arrow-right hide-sm'></i></li></Link></ul>
+          <div className='special'>
+            {/* <ul className='special'> */}
+            <Link to='/register' ><button className="specialButtons">Sign Up{'   '}<i className='fa fa-arrow-right hide-sm'></i></button></Link>
+            <Link to='/login'><button className="specialButtons">Login{'   '}<i className='fa fa-arrow-right hide-sm'></i></button></Link>
+            {/* </ul> */}
           </div>
         </div>
 

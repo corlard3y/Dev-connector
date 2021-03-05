@@ -16,7 +16,9 @@ const Profiles = ({
 
     return (
        <Fragment>
-           {loading ? <Spinner /> : <Fragment>
+           {loading ? <Spinner /> : 
+           <div className='saka'>
+                <Fragment>
                <h1 className="large text-primary">Developers</h1>
                <p className="lead">
                    <i className="fa fa-connectdevelop"></i>{'  '}Browse and connect with Other Developers and Professionals around the world. 
@@ -28,7 +30,9 @@ const Profiles = ({
                            ))
                     ) : <h4>No profiles found...</h4> }
                    </div>
-               </Fragment>}
+               </Fragment>
+           </div>
+           }
        </Fragment>
     )
 }

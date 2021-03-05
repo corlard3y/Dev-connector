@@ -29,22 +29,27 @@ if(localStorage.token){
 }
 
 
+
 const App = () =>  {
   useEffect(() => {
     store.dispatch(loadUser());
   }, []);
+
+
 
   return(
   <Provider store={store}>
   <Router>
       <Fragment>
         <Navbar />
-        <div className='upper'>
-        <Route exact path='/' component={Landing} />
-        </div>
-      <section className="container">
+
+      
+      <section className="container" >
       <Alert />
+        <Route exact path='/' component={Landing} />
+
           <Switch>
+            
             <Route path='/register' component={Register} />
             <Route path='/login' component={Login} />
             <Route path='/profiles' component={Profiles} />

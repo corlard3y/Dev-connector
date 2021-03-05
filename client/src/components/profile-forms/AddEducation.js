@@ -27,8 +27,8 @@ const AddEducation = ({ addEducation, history}) => {
   
     return (
         <Fragment>
-
-      <h1 className="large text-primary">
+          <div className='saka'>
+          <h1 className="large text-primary">
         Add Your Education
       </h1>
       <p className="lead">
@@ -104,6 +104,9 @@ const AddEducation = ({ addEducation, history}) => {
      
         </div>
         </form>
+          </div>
+
+      
         </Fragment>
     )
 }

@@ -34,7 +34,7 @@ router.post('/', [
     }
 
     //get user gravatar
-    const avatar = gravatar.url(email,{
+    const avatar = gravatar.url(email ,{
         s:'200',
         r:'pg',
         d:'mm'
@@ -76,6 +76,8 @@ router.post('/', [
     }
     console.log(req.body);
     });
+
+    
 
 
 module.exports = router;

@@ -18,7 +18,9 @@ const Post = ({ getPost,
 
 
     return (
-        loading || post === null ? <Spinner /> : <Fragment>
+        loading || post === null ? <Spinner /> :
+        <div className='saka'>
+                <Fragment>
             <Link to='/posts' className='btn'>
                 Back to Posts
             </Link>
@@ -29,6 +31,8 @@ const Post = ({ getPost,
                 ))}
             </div>
         </Fragment>
+        </div>
+        
     )
 };
 

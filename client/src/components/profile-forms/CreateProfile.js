@@ -48,7 +48,8 @@ const CreateProfile = ({ createProfile, history }) => {
     }
     return (
         <Fragment>
-            <h1 className="large text-primary">
+          <div className='saka'>
+          <h1 className="large text-primary">
         Create Your Profile
       </h1>
       <p className="lead">
@@ -167,6 +168,8 @@ const CreateProfile = ({ createProfile, history }) => {
             <Link className="btn btn-post" to="/dashboard" target='_top'>Go Back</Link>     
         </div>
 </form>
+          </div>
+           
         </Fragment>
     );
 };
