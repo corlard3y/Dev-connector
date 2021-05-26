@@ -28,20 +28,22 @@ const AddEducation = ({ addEducation, history}) => {
     return (
         <Fragment>
           <div className='saka'>
-          <h1 className="large text-primary">
+          <h1 className="large text-primary centered">
         Add Your Education
       </h1>
       <p className="lead">
         <i className="fa fa-graduation-cap"></i> Add any school, bootcamp, etc that
         you have attended
       </p>
-      <small>* = required field</small>
+      <div className='centered'> 
+        <small>* = required field</small>
+      </div>
       <form className="form"
       onSubmit={e => {
         e.preventDefault();
         addEducation(formData, history);
     }}
-      >
+      style={{textAlign:'center'}}>
         <div className="form-group">
           <input
             type="text"
@@ -98,7 +100,7 @@ const AddEducation = ({ addEducation, history}) => {
             value={description} onChange={e => onChange(e)}
           ></textarea>
         </div>
-        <div style={{display:'flex',flexDirection:'row'}}>
+        <div style={{display:'flex',flexDirection:'row',justifyContent:'center'}}>
         <input type="submit" className="btn btn-post" target='_top' />
         <Link className="btn btn-post" to="/dashboard" target='_top'>Go Back</Link>
      

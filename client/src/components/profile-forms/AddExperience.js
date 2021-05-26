@@ -28,19 +28,21 @@ const AddExperience = ({ addExperience, history}) => {
     return (
         <Fragment>
           <div className='saka'>
-          <h1 className="large text-primary">
+          <h2 className="large text-primary centered">
        Add An Experience
-      </h1>
+      </h2>
       <p className="lead">
         <i className="fa fa-code"></i> Add any developer/programming
         positions that you have had in the past
       </p>
-      <small>* = required field</small>
+      <div className='centered'>
+           <small>* = required field</small>
+      </div>
       <form className="form" 
       onSubmit={e => {
           e.preventDefault();
           addExperience(formData, history);
-      }}>
+      }} style={{textAlign:'center'}}>
         <div className="form-group">
           <input type="text" placeholder="* Job Title" name="title" value={title} onChange={e => onChange(e)} required />
         </div>
@@ -77,7 +79,7 @@ const AddExperience = ({ addExperience, history}) => {
             placeholder="Job Description"
           ></textarea>
         </div>
-        <div style={{display:'flex',flexDirection:'row'}}>
+        <div style={{display:'flex',flexDirection:'row',justifyContent:'center'}}>
             <input type="submit" className="btn btn-post" target='_top'/>
             <Link className="btn btn-post" to="/dashboard" target='_top'>Go Back</Link>     
         </div>

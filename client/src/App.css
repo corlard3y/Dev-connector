@@ -27,20 +27,27 @@
   -moz-osx-font-smoothing: grayscale;
   vertical-align: middle;
 }
-/* * { */
-/* box-sizing: border-box; */
-/* margin: 0; */
-/* padding: 0; */
-/* overflow-x: hidden; */
-/* background-color: red; */
-/* } */
 .saka {
   padding: 1.5rem 4rem;
+  /* background-color: red; */
+  margin-left: auto;
+  margin-right: auto;
+
+  
+}
+.saka-inner{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center
 }
 .sake {
   padding: 1.5rem 4rem 0rem 4rem;
 }
 .alert {
+  position: fixed;
+  top: 10%;
+  width: 90%;
   padding: 0.8rem;
   opacity: 0.9;
   background: var(--light-color);
@@ -59,8 +66,6 @@ body {
   padding-top: 6vh;
   background-color: white;
   color: #333;
-  /* padding-left: 4rem;
-  padding-right: 4rem; */
 }
 a {
   color: #464e55;
@@ -128,8 +133,10 @@ img {
 
 .lead {
   font-size: 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
+  margin-top: 0.5rem;
   color: #343a40;
+  text-align: center;
 }
 
 .text-center {
@@ -169,7 +176,9 @@ img {
 .py-3 {
   padding: 3rem 0;
 }
-
+.centered{
+  text-align: center;
+}
 /* Margin */
 .m {
   margin: 0.5rem;
@@ -194,6 +203,9 @@ img {
 }
 .my-3 {
   margin: 3rem 0;
+}
+.mt-1{
+  margin-top: 1rem;
 }
 
 .btn {
@@ -310,6 +322,7 @@ img {
   display: block;
   margin-top: 0.3rem;
   color: #888;
+  text-align: center;
 }
 
 .form input[type='text'],
@@ -319,10 +332,13 @@ img {
 .form select,
 .form textarea {
   display: block;
-  width: 100%;
+  width: 60%;
+  margin: 0rem auto;
   padding: 0.4rem;
   font-size: 1.2rem;
   border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  outline: none;
 }
 
 .form input[type='submit'],
@@ -337,6 +353,7 @@ button {
 .form .social-input i {
   padding: 0.5rem;
   width: 4rem;
+
 }
 
 .form .social-input i.fa-twitter {
@@ -385,11 +402,16 @@ button {
 .pre-Buttons {
   border: 1px solid #464e55;
   border-radius: 5px;
-  text-align: center;
   width: 80px;
   height: 40px;
   background-color: white;
-  margin: 5px;
+  margin: 0;
+  position: absolute;;
+  
+}
+.commit{
+  display: flex;
+  justify-content: center;
 }
 .pre-Buttons:hover {
   background-color: #464e55;
@@ -892,9 +914,17 @@ button {
   .sake {
     padding: 1.5rem 2rem 0rem 2rem;
   }
+  .form input[type='text'],
+.form input[type='email'],
+.form input[type='password'],
+.form input[type='date'],
+.form select,
+.form textarea {
+  width: 100%;
+}
   .saka {
     padding: 1.5rem 2rem;
-  }
+    }
   .fa-edit {
     padding-right: 0px;
   }
@@ -1079,6 +1109,14 @@ button {
 }
 
 @media (max-width: 376px) {
+  .form input[type='text'],
+.form input[type='email'],
+.form input[type='password'],
+.form input[type='date'],
+.form select,
+.form textarea {
+  width: 100%;
+}
   .saka {
     padding: 1.5rem 2rem;
   }

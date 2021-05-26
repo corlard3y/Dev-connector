@@ -37,7 +37,8 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
     return (
        <Fragment>
          <div className='saka'>
-         <h1 className="large text-primary">Sign Up</h1>
+         <div className='saka-inner'> 
+
       <p className="lead"><i className="fa fa-user"></i> Create Your Account</p>
       <form className="form" onSubmit={e => onSubmit(e)}>
         <div className="form-group">
@@ -81,13 +82,17 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             // minLength="6"
           />
         </div>
+        <div className='commit'>
         <input type="submit" 
         className="pre-Buttons" 
         value="Register" />
+        </div>
+        
       </form>
-      <p className="my-1">
+      <p className="my-1 centered"  style={{marginTop:'4rem',fontSize:'0.75rem'}}>
         Already have an account? <Link to='/login'><span className='link-btn'>Sign In</span></Link>
       </p>
+      </div>
          </div>
            
        </Fragment>

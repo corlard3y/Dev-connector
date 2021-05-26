@@ -49,14 +49,16 @@ const CreateProfile = ({ createProfile, history }) => {
     return (
         <Fragment>
           <div className='saka'>
-          <h1 className="large text-primary">
+          <h1 className="large text-primary centered">
         Create Your Profile
       </h1>
       <p className="lead">
         <i className="fa fa-user"></i> Let's get some information to make your
         profile stand out
       </p>
-      <small>* = required field</small>
+      <div className='centered'>
+          <small>* = required field</small>
+      </div>
       <form className="form" onSubmit={e => onSubmit(e)}>
         <div className="form-group">
           <select name="status" value={status} onChange={e => onChange(e)}>
@@ -123,7 +125,7 @@ const CreateProfile = ({ createProfile, history }) => {
           <small className="form-text">Tell us a little about yourself</small>
         </div>
 
-        <div className="my-2">
+        <div className="my-2"  style={{display:'flex',justifyContent:'center'}}>
           <button onClick={()=> toggleSocialInputs(!displaySocialInputs)} type="button" className="btn btn-light">
             Add Social Network Links
           </button>
@@ -163,7 +165,7 @@ const CreateProfile = ({ createProfile, history }) => {
             
         </Fragment>)}
 
-        <div style={{display:'flex',flexDirection:'row'}}>
+        <div style={{display:'flex',flexDirection:'row',justifyContent:'center'}}>
             <input type="submit" className="btn btn-post" target='_top'/>
             <Link className="btn btn-post" to="/dashboard" target='_top'>Go Back</Link>     
         </div>

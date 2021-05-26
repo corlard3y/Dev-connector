@@ -41,8 +41,11 @@ const Dashboard = ({ getCurrentProfile ,
 
            </Fragment>:
            <Fragment>
-               <p>You have not yet setup a profile, please add some info</p>
+               <div className='centered mt-1'>
+               <p className='centered'>You have not yet setup a profile, please add some info</p>
                <Link to='/create-profile' className='btn bg-post my-1'>Create Profile</Link>
+               
+               </div>
                </Fragment>}
        </Fragment>
        </div>

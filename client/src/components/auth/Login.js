@@ -29,7 +29,6 @@ const Login = ({ login, isAuthenticated }) => {
     return (
        <Fragment>
          <div className='saka'>
-         <h1 className="large text-primary">Sign In</h1>
       <p className="lead"><i className="fa fa-user"></i> Sign Into Your Account</p>
       <form className="form" onSubmit={e => onSubmit(e)}>
         <div className="form-group">
@@ -51,11 +50,13 @@ const Login = ({ login, isAuthenticated }) => {
           onChange={ e => onChange(e)}
           />
         </div>
-        <input type="submit" 
+        <div className='commit'>
+             <input type="submit" 
         className="pre-Buttons" 
         value="Login" />
+        </div>
       </form>
-      <p className="my-1">
+      <p className="my-1 centered" style={{marginTop:'4rem',fontSize:'0.75rem'}}>
         Don't have an Account?? <Link to='/register'><span className='link-btn'>Join</span></Link>
       </p>
          </div>
