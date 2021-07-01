@@ -1,6 +1,0 @@
-{
-    "mongoURI": "mongodb+srv://corlard3y:booktara@cak3s.wuyr0.mongodb.net/devconnector?retryWrites=true&w=majority",
-    "jwtSecret":"mySecretToken",
-    "githubClientId":"cf3be6ae297c6debab5d",
-    "githubSecret":" 4c7da72f1d553850d14dd352b70e58c8965f67fe"
-}
